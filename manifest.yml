@@ -5,3 +5,4 @@ applications:
   instances: 1
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   random-route: true
+#  stack: cflinuxfs3

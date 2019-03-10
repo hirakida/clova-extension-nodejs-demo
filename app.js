@@ -2,7 +2,7 @@ const clova = require('@line/clova-cek-sdk-nodejs');
 const express = require('express');
 const APPLICATION_ID = process.env.APPLICATION_ID;
 
-const clovaSkillHandler =
+const clovaHandler =
   clova.Client
        .configureSkill()
        .onLaunchRequest(responseHelper => {
@@ -16,24 +16,24 @@ const clovaSkillHandler =
            // Builtin
            case 'Clova.GuideIntent':
              responseHelper.setSimpleSpeech(
-               clova.SpeechBuilder.createSpeechText('これはデモ用のスキルです')
-             );
+               clova.SpeechBuilder.createSpeechText('これはデモ用のスキルです'));
              break;
            case 'Clova.YesIntent':
              responseHelper.setSimpleSpeech(
-               clova.SpeechBuilder.createSpeechText('はい')
-             );
+               clova.SpeechBuilder.createSpeechText('はい'));
              break;
            case 'Clova.NoIntent':
              responseHelper.setSimpleSpeech(
-               clova.SpeechBuilder.createSpeechText('いいえ')
-             );
+               clova.SpeechBuilder.createSpeechText('いいえ'));
              break;
            case 'Clova.CancelIntent':
              responseHelper.setSimpleSpeech(
-               clova.SpeechBuilder.createSpeechText('キャンセルします')
-             );
+               clova.SpeechBuilder.createSpeechText('キャンセルします'));
              responseHelper.endSession();
+             break;
+           default:
+             responseHelper.setSimpleSpeech(
+               clova.SpeechBuilder.createSpeechText('もう一度、お願いします'));
              break;
          }
        })
@@ -43,7 +43,7 @@ const clovaSkillHandler =
 
 const app = new express();
 const clovaMiddleware = clova.Middleware({applicationId: APPLICATION_ID});
-app.post('/', clovaMiddleware, clovaSkillHandler);
+app.post('/', clovaMiddleware, clovaHandler);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
