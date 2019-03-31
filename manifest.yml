@@ -3,6 +3,5 @@ applications:
 - name: clova-extension-nodejs-demo
   memory: 64m
   instances: 1
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
-  random-route: true
+  random-route: false
 #  stack: cflinuxfs3
