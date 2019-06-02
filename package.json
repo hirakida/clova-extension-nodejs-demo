@@ -2,7 +2,7 @@
   "name": "clova-extension-nodejs-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "@line/clova-cek-sdk-nodejs": "^1.1.2",
     "body-parser": "^1.19.0",
@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "12.3.1"
@@ -19,6 +19,6 @@
     "type": "git",
     "url": "git+https://github.com/hirakida/clova-extension-nodejs-demo.git"
   },
-  "author": "",
+  "author": "hirakida",
   "license": "ISC"
 }
