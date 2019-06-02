@@ -3,5 +3,4 @@ applications:
 - name: clova-extension-nodejs-demo
   memory: 64m
   instances: 1
-  random-route: false
-#  stack: cflinuxfs3
+  stack: cflinuxfs3
