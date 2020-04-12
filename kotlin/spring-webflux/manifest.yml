@@ -1,0 +1,10 @@
+---
+applications:
+  - name: clova-skill-kotlin-demo
+    path: build/libs/clova-skill-kotlin-demo-0.0.1-SNAPSHOT.jar
+    memory: 256m
+    instances: 1
+    random-route: false
+    env:
+      JAVA_OPTS: '-XX:ReservedCodeCacheSize=32M -XX:+PrintGCDetails'
+      JBP_CONFIG_OPEN_JDK_JRE: '{ memory_calculator: { stack_threads: 30 }, jre: { version: 11.+} }'

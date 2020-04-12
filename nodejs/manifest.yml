@@ -3,4 +3,6 @@ applications:
 - name: clova-skill-nodejs-demo
   memory: 64m
   instances: 1
-  stack: cflinuxfs3
+  random-route: false
+  env:
+    APPLICATION_ID: com.github.hirakida.clova.demo
