@@ -1,1 +1,1 @@
-# clova-extension-nodejs-demo
+# clova-skill-demo

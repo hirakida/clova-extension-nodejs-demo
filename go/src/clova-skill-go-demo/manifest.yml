@@ -1,0 +1,8 @@
+applications:
+  - name: clova-skill-go-demo
+    memory: 128m
+    instances: 1
+    random-route: false
+    env:
+      GOVERSION: go1.13
+      GOPACKAGENAME: github.com/hirakida/clova-skill-demo

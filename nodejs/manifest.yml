@@ -1,6 +1,6 @@
 ---
 applications:
-- name: clova-extension-nodejs-demo
+- name: clova-skill-nodejs-demo
   memory: 64m
   instances: 1
   stack: cflinuxfs3
