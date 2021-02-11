@@ -5,3 +5,5 @@ applications:
   instances: 1
   random-route: false
   command: python3 app.py
+  env:
+    APPLICATION_ID: com.github.hirakida.clova.btc
