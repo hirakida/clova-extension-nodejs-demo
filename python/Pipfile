@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "1.1.2"
+clova-cek-sdk = "1.1.2"
+requests = "2.25.1"
+
+[requires]
+python_version = "3.9"
